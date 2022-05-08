@@ -1,2 +1,6 @@
-package com.company;public class work {
+package com.company;
+
+public class work {
+
 }
+

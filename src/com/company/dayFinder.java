@@ -1,2 +1,5 @@
-package com.company;public class dayFinder {
+package com.company;
+
+public class dayFinder {
+
 }
