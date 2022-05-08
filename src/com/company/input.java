@@ -12,6 +12,7 @@ public class input {
         System.out.println("Start date: ");
         System.out.println("End date: ");
         System.out.println("Press 1 to continue");
+        System.out.println("Test");
     }
 }
 
