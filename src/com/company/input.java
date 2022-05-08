@@ -2,17 +2,42 @@ package com.company;
 
 import java.util.Scanner;
 
-public class input {
+public class input extends Main{
 
-    public static void scanner(String[] args){
+    public static void classes(){
+        String className;
+        String classStartTime;
+        String classEndTime;
+
+        String startDate;
+        String endDate;
+        //Scanner sc = new Scanner(System.in);
         Scanner sc = new Scanner(System.in);
+
         System.out.println("Enter your class Schedule");
+
         System.out.println("Class Name: ");
-        System.out.println("Class time: ");
+        className=sc.next();
+
+        System.out.println("Class start time: ");
+        classStartTime=sc.next();
+
+        System.out.println("Class end time: ");
+        classEndTime=sc.next();
+
         System.out.println("Start date: ");
+        startDate=sc.next();
+
         System.out.println("End date: ");
-        System.out.println("Press 1 to continue");
-        System.out.println("Test");
+        endDate=sc.next();
+
+
+
+        System.out.println(className);
+
+
+
+
     }
 }
 
