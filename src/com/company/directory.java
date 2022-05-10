@@ -11,37 +11,53 @@ public class directory {
     static input e = new input();
     static int enter = e.getEnter();
 
+    //start month for entered class
     static addClass sm = new addClass();
     static int startDateMonth = sm.getStartDateMonth();
-
+    //start day for entered class
     static addClass sd = new addClass();
     static int startDateDay = sd.getStartDateMonth();
-
-    static addClass fc = new addClass();
+    //full class description that seen
+    static input fc = new input();
     static String fullClass = fc.getFullClass();
+    //name of month that is wanted to be seen by user
+    static input sem = new input();
+    static String seeM = sem.getSeeM();
+
+    public int getSeeMonth(){return seeMonth;}
+    public void setSeeMonth(int seeMonth){
+        this.seeMonth=seeMonth;
+    }
 
 
     public static void main() {
 
         if (e.getEnter() == 4) {
+
             System.out.println("Type the number of the month you want to view (1-12): ");
             seeMonth = Integer.parseInt(sc1.next());
             System.out.println("Type day of that month you want to view: ");
             seeDay = Integer.parseInt(sc1.next());
+            calender.main();
 
-            if (startDateMonth <= seeMonth && startDateDay <= seeDay) {
                 System.out.println("----------------------------");
-                System.out.println("Month of " + seeMonth + " Day " + seeDay);
-                System.out.println(fullClass);
+                System.out.println("Month of " + sem.getSeeM() + " Day " + seeDay);
+                System.out.println(" ");
+                System.out.println("Schedule of activities:");
+
+
+                if (startDateMonth <= seeMonth && startDateDay <= seeDay){
+                System.out.println(fc.getFullClass());}
+
+
                 System.out.println(" ");
                 //System.out.println(dueDates);
                 System.out.println(" ");
-                //System.out.println(todo);
+                //System.out.println( to-do );
                 System.out.println(" ");
                 System.out.println("----------------------------");
                 System.out.println("Press 0 to go back to menu");
                 e.setEnter(Integer.parseInt(sc1.next()));
-            }
         }
     }
 }

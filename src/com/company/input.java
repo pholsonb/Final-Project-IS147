@@ -4,14 +4,48 @@ public class input {
 
 
     static int enter = 0 ;
+    static String fullClass;
+    static String startM;
+    static String endM;
+    static String seeM;
 
-    public int getEnter(){
-        return enter;
-    }
-
+    public int getEnter(){return enter;}
     public void setEnter(int newEnter){
         input.enter = newEnter;
     }
+
+    //full class description that gets entered into directory with time and name
+    public String getFullClass(){
+        return fullClass;
+    }
+    public void setFullClass(String fullClass){
+        this.fullClass=fullClass;
+    }
+
+    //Start month of new added class Getter and Setter
+    public String getStartM(){
+        return startM;
+    }
+    public void setStartM(String startM){
+        this.startM=startM;
+    }
+
+    //End month of new added class Getter and Setter
+    public String getEndM(){
+        return endM;
+    }
+    public void setEndM(String endM){
+        this.endM=endM;
+    }
+
+    //Month that is seen in directory Getter and Setter
+    public String getSeeM(){
+        return seeM;
+    }
+    public void setSeeM(String seeM){
+        this.seeM=seeM;
+    }
+
 
     public static void classes() {
         for(int i = 0; i < 100; i++) {
