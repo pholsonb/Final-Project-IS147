@@ -12,6 +12,10 @@ public class addClass {
     static int endDateMonth;
     static int endDateDay;
     static String weekday;
+    static int classNum=0;
+    static String fullClass1;
+    static String fullClass2;
+
 
 
     public int getStartDateMonth(){
@@ -42,6 +46,19 @@ public class addClass {
         this.weekday=weekday;
     }
 
+    public String getFullClass1(){
+        return fullClass1;
+    }
+    public String getFullClass2(){
+        return fullClass2;
+    }
+
+
+    public int getClassNum(){return classNum;}
+    public void setClassNum(int newClassNum){
+        this.classNum=newClassNum;
+    }
+
     static Scanner sc1 = new Scanner(System.in);
 
     static input e = new input();
@@ -51,6 +68,8 @@ public class addClass {
     static input sm = new input();
 
     static input em = new input();
+
+
 
 
     public static void main() {
@@ -91,9 +110,20 @@ public class addClass {
                 System.out.println("Starts " + sm.getStartM() + "-" + startDateDay + " ends " + em.getEndM() + "-" + endDateDay);
                 fc.setFullClass(classStartTime + "-" + classEndTime + " " + className);
 
+                classNum+=1;
+
                 System.out.println("Press 0 to go back to menu");
                 e.setEnter(Integer.parseInt(sc1.next()));
 
+        }
+
+
+
+        if(classNum==1){
+            fullClass1=fc.getFullClass();
+        }
+        if(classNum==2){
+            fullClass2=fc.getFullClass();
         }
     }
 }

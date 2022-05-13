@@ -4,6 +4,7 @@ public class input {
 
 
     static int enter = 0 ;
+
     static String fullClass;
     static String startM;
     static String endM;
@@ -14,6 +15,7 @@ public class input {
     public void setEnter(int newEnter){
         input.enter = newEnter;
     }
+
 
     public String getWeek(){return week;}
     public void setWeek(String week){

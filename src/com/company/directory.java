@@ -26,6 +26,9 @@ public class directory {
 
     static input w = new input();
 
+    static addClass fc1 = new addClass();
+
+
     public int getSeeMonth() {
         return seeMonth;
     }
@@ -54,8 +57,9 @@ public class directory {
             System.out.println("Schedule of activities:");
 
             if (startDateMonth <= seeMonth && startDateDay <= seeDay) {
-                //System.out.print(class1);
-                System.out.println(" "+w.getWeek());
+                System.out.println(fc1.getFullClass1());
+                System.out.println(fc1.getFullClass2());
+                //System.out.println(" "+w.getWeek());
             }
 
 
