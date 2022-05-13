@@ -6,26 +6,20 @@ public class calender {
 
     //class start month number
     static addClass sdm = new addClass();
-    static int startDateMonth = sdm.getStartDateMonth();
 
     //class end month number
     static addClass edm = new addClass();
-    static int endDateMonth = edm.getEndDateMonth();
 
     static directory seeMonth1 = new directory();
-    static int seeMo = seeMonth1.getSeeMonth();
 
     //start month that is a string
     static input sm = new input();
-    static String startM = sm.getStartM();
 
     //end month that is a string
     static input em = new input();
-    static String endM = em.getEndM();
 
     //month that is entered by user in directory that is a string
     static input mE = new input();
-    static String monthE = mE.getSeeM();
 
     public static void main(){
 
@@ -44,6 +38,9 @@ public class calender {
                 mE.setSeeM(month[i-1]);
             }
         }
+
+
+
     }
 }
 

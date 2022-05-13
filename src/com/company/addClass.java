@@ -11,7 +11,7 @@ public class addClass {
     static int startDateDay;
     static int endDateMonth;
     static int endDateDay;
-    static int weekday;
+    static String weekday;
 
 
     public int getStartDateMonth(){
@@ -35,19 +35,23 @@ public class addClass {
         this.startDateDay=startDateDay;
     }
 
+    public String getWeekday(){
+        return String.valueOf(weekday);
+    }
+    public void setWeekday(String weekday){
+        this.weekday=weekday;
+    }
+
     static Scanner sc1 = new Scanner(System.in);
 
     static input e = new input();
-    static int enter = e.getEnter();
 
     static input fc = new input();
-    static String fullClass = fc.getFullClass();
 
     static input sm = new input();
-    static String startM = sm.getStartM();
 
     static input em = new input();
-    static String endM = em.getEndM();
+
 
     public static void main() {
         if (e.getEnter() == 1) {
@@ -67,7 +71,7 @@ public class addClass {
 
                 System.out.println("enter what days of the week this class occurs (1-7)");
                 System.out.println("1 represents Sunday, 7 is Saturday. For example 34 is Tuesday and Wednesday, 26 is Monday and Friday");
-                weekday = Integer.parseInt(sc.next());
+                weekday = sc.next();
 
                 System.out.println("Enter number of start month (1-12): ");
                 startDateMonth = Integer.parseInt(sc.next());
@@ -82,6 +86,7 @@ public class addClass {
                 endDateDay = Integer.parseInt(sc.next());
 
                 calender.main();
+                weekdayFinder.main();
                 System.out.println(classStartTime + "-" + classEndTime + " " + className);
                 System.out.println("Starts " + sm.getStartM() + "-" + startDateDay + " ends " + em.getEndM() + "-" + endDateDay);
                 fc.setFullClass(classStartTime + "-" + classEndTime + " " + className);

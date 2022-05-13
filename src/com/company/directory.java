@@ -9,45 +9,55 @@ public class directory {
     static Scanner sc1 = new Scanner(System.in);
 
     static input e = new input();
-    static int enter = e.getEnter();
 
     //start month for entered class
     static addClass sm = new addClass();
     static int startDateMonth = sm.getStartDateMonth();
+
     //start day for entered class
     static addClass sd = new addClass();
     static int startDateDay = sd.getStartDateMonth();
+
     //full class description that seen
     static input fc = new input();
-    static String fullClass = fc.getFullClass();
+
     //name of month that is wanted to be seen by user
     static input sem = new input();
-    static String seeM = sem.getSeeM();
 
-    public int getSeeMonth(){return seeMonth;}
-    public void setSeeMonth(int seeMonth){
-        this.seeMonth=seeMonth;
+    static input w = new input();
+
+    public int getSeeMonth() {
+        return seeMonth;
+    }
+
+    public void setSeeMonth(int seeMonth) {
+        this.seeMonth = seeMonth;
     }
 
 
     public static void main() {
 
-        if (e.getEnter() == 4) {
+        if (e.getEnter() == 3) {
 
             System.out.println("Type the number of the month you want to view (1-12): ");
             seeMonth = Integer.parseInt(sc1.next());
             System.out.println("Type day of that month you want to view: ");
             seeDay = Integer.parseInt(sc1.next());
             calender.main();
-
-                System.out.println("----------------------------");
-                System.out.println("Month of " + sem.getSeeM() + " Day " + seeDay);
-                System.out.println(" ");
-                System.out.println("Schedule of activities:");
+            weekdayFinder.main();
 
 
-                if (startDateMonth <= seeMonth && startDateDay <= seeDay){
-                System.out.println(fc.getFullClass());}
+
+            System.out.println("----------------------------");
+            System.out.println("Month of " + sem.getSeeM() + " Day " + seeDay);
+            System.out.println(" ");
+            System.out.println("Schedule of activities:");
+
+            if (startDateMonth <= seeMonth && startDateDay <= seeDay) {
+                //System.out.print(class1);
+                System.out.println(" "+w.getWeek());
+            }
+
 
 
                 System.out.println(" ");
@@ -58,7 +68,8 @@ public class directory {
                 System.out.println("----------------------------");
                 System.out.println("Press 0 to go back to menu");
                 e.setEnter(Integer.parseInt(sc1.next()));
+            }
         }
     }
-}
+
 

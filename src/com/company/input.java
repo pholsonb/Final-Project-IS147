@@ -8,10 +8,16 @@ public class input {
     static String startM;
     static String endM;
     static String seeM;
+    static String week;
 
     public int getEnter(){return enter;}
     public void setEnter(int newEnter){
         input.enter = newEnter;
+    }
+
+    public String getWeek(){return week;}
+    public void setWeek(String week){
+        this.week=week;
     }
 
     //full class description that gets entered into directory with time and name
@@ -51,7 +57,9 @@ public class input {
         for(int i = 0; i < 100; i++) {
             menu.main();
             addClass.main();
+            assignment.main();
             directory.main();
+            error.main();
         }
         }
         }
