@@ -12,16 +12,13 @@ public class addClass {
     static int endDateMonth;
     static int endDateDay;
     static String weekday;
-    static int classNum;
-    static String fullClass1;
-    static String fullClass2;
-    static String fullClass3;
-    static String fullClass4;
-    static String fullClass5;
+    static int classNum=0;
+    static String fullClass1 =" ";
+    static String fullClass2 =" ";
+    static String fullClass3 =" ";
+    static String fullClass4= " ";
+    static String fullClass5 =" ";
 
-    addClass(){
-        classNum=0;
-    }
     public int getStartDateMonth(){
         return startDateMonth;
     }
@@ -75,12 +72,6 @@ public class addClass {
 
     static input e = new input();
 
-    static input fc = new input();
-
-    static input sm = new input();
-
-    static input em = new input();
-
     public static void main() {
         if (e.getEnter() == 1) {
 
@@ -115,29 +106,30 @@ public class addClass {
 
                 calender.main();
                 weekdayFinder.main();
+                System.out.println("----------------------------------------");
                 System.out.println(classStartTime + "-" + classEndTime + " " + className + " on "+ e.getWeek());
-                System.out.println("Starts " + sm.getStartM() + "-" + startDateDay + " ends " + em.getEndM() + "-" + endDateDay);
-                fc.setFullClass(classStartTime + "-" + classEndTime + " " + className + " on "+ e.getWeek());
+                System.out.println("Starts " + e.getStartM() + "-" + startDateDay + " ends " + e.getEndM() + "-" + endDateDay);
+                e.setFullClass(classStartTime + "-" + classEndTime + " " + className + " on "+ e.getWeek());
 
                 classNum+=1;
-
+                System.out.println("----------------------------------------");
                 System.out.println("Press 0 to go back to menu");
                 e.setEnter(Integer.parseInt(sc1.next()));
         }
         if(classNum==1){
-            fullClass1=fc.getFullClass();
+            fullClass1=e.getFullClass();
         }
         if(classNum==2){
-            fullClass2=fc.getFullClass();
+            fullClass2=e.getFullClass();
         }
         if(classNum==3){
-            fullClass3=fc.getFullClass();
+            fullClass3=e.getFullClass();
         }
         if(classNum==4){
-            fullClass4=fc.getFullClass();
+            fullClass4=e.getFullClass();
         }
         if(classNum==5){
-            fullClass5=fc.getFullClass();
+            fullClass5=e.getFullClass();
         }
     }
 

@@ -46,17 +46,8 @@ public class directory {
     static addClass sd = new addClass();
     static int startDateDay = sd.getStartDateMonth();
 
-    //full class description that seen
-    static input fc = new input();
-
     //name of month that is wanted to be seen by user
     static input sem = new input();
-
-    static input w = new input();
-
-    static addClass fc1 = new addClass();
-
-    static assignment as = new assignment();
 
     public int getSeeMonth() {
         return seeMonth;
@@ -66,11 +57,9 @@ public class directory {
         this.seeMonth = seeMonth;
     }
 
-
     static sample ob1 = new sample();
 
     static Calendar c = Calendar.getInstance();
-
 
     public static void main() {
 

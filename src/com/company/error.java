@@ -10,7 +10,7 @@ public class error {
         if (e.getEnter() >= 4) {
             System.out.println("error please enter number between 1-3");
             e.setEnter(Integer.parseInt(sc1.next()));
-        }
+            }
         }
     }
 

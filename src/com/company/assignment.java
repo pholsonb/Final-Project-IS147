@@ -8,16 +8,12 @@ public class assignment {
     static String aClass;
     static int aDueMonth;
     static int aDueDay;
-    static int assignmentNumber;
-    static String fullAssignment1;
-    static String fullAssignment2;
-    static String fullAssignment3;
-    static String fullAssignment4;
-    static String fullAssignment5;
-
-    assignment(){
-        assignmentNumber=0;
-    }
+    static int assignmentNumber=0;
+    static String fullAssignment1 = " ";
+    static String fullAssignment2 = " ";
+    static String fullAssignment3 = " ";
+    static String fullAssignment4 = " ";
+    static String fullAssignment5 = " ";
 
     public String getFullAssignment1(){
         return fullAssignment1;
@@ -35,14 +31,10 @@ public class assignment {
         return fullAssignment5;
     }
 
-
-
     static Scanner sc = new Scanner(System.in);
     static Scanner sc1 = new Scanner(System.in);
 
     static input e = new input();
-
-    static input fa = new input();
 
     public static void main() {
         if (e.getEnter() == 2) {
@@ -59,29 +51,31 @@ public class assignment {
             System.out.println("What day is the assignment due: ");
             aDueDay= Integer.parseInt(sc.next());
 
+            System.out.println("----------------------------------------");
+            e.setFullAssignment(aName+" for "+aClass+" Due " +aDueMonth+" "+aDueDay);
+            System.out.println(e.getFullAssignment());
+            System.out.println("----------------------------------------");
+
             System.out.println("Press 0 to go back to menu");
 
-            fa.setFullAssignment(aName+" for "+aClass+" Due " +aDueMonth+" "+aDueDay);
-
             assignmentNumber+=1;
-
 
             e.setEnter(Integer.parseInt(sc1.next()));
         }
         if(assignmentNumber==1){
-            fullAssignment1=fa.getFullAssignment();
+            fullAssignment1=e.getFullAssignment();
         }
         if(assignmentNumber==2){
-            fullAssignment2=fa.getFullAssignment();
+            fullAssignment2=e.getFullAssignment();
         }
         if(assignmentNumber==3){
-            fullAssignment3=fa.getFullAssignment();
+            fullAssignment3=e.getFullAssignment();
         }
         if(assignmentNumber==4){
-            fullAssignment4=fa.getFullAssignment();
+            fullAssignment4=e.getFullAssignment();
         }
         if(assignmentNumber==5){
-            fullAssignment5=fa.getFullAssignment();
+            fullAssignment5=e.getFullAssignment();
         }
     }
 }
