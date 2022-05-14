@@ -18,9 +18,6 @@ public class menu {
             System.out.println("Type 1 to enter a class schedule");
             System.out.println("Type 2 to add assignment");
             System.out.println("Type 3 to view Schedule");
-
-            System.out.println(cn.getClassNum());
-
             e.setEnter(Integer.parseInt(sc1.next()));
         }
     }

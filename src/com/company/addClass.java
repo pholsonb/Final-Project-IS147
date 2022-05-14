@@ -12,12 +12,16 @@ public class addClass {
     static int endDateMonth;
     static int endDateDay;
     static String weekday;
-    static int classNum=0;
+    static int classNum;
     static String fullClass1;
     static String fullClass2;
+    static String fullClass3;
+    static String fullClass4;
+    static String fullClass5;
 
-
-
+    addClass(){
+        classNum=0;
+    }
     public int getStartDateMonth(){
         return startDateMonth;
     }
@@ -52,7 +56,15 @@ public class addClass {
     public String getFullClass2(){
         return fullClass2;
     }
-
+    public String getFullClass3(){
+        return fullClass3;
+    }
+    public String getFullClass4(){
+        return fullClass4;
+    }
+    public String getFullClass5(){
+        return fullClass5;
+    }
 
     public int getClassNum(){return classNum;}
     public void setClassNum(int newClassNum){
@@ -68,9 +80,6 @@ public class addClass {
     static input sm = new input();
 
     static input em = new input();
-
-
-
 
     public static void main() {
         if (e.getEnter() == 1) {
@@ -88,8 +97,8 @@ public class addClass {
                 System.out.println("Class end time: ");
                 classEndTime = sc.next();
 
-                System.out.println("enter what days of the week this class occurs (1-7)");
-                System.out.println("1 represents Sunday, 7 is Saturday. For example 34 is Tuesday and Wednesday, 26 is Monday and Friday");
+                System.out.println("enter what day of the week this class occurs (1-7)");
+                System.out.println("1 represents Sunday, 7 is Saturday");
                 weekday = sc.next();
 
                 System.out.println("Enter number of start month (1-12): ");
@@ -106,24 +115,30 @@ public class addClass {
 
                 calender.main();
                 weekdayFinder.main();
-                System.out.println(classStartTime + "-" + classEndTime + " " + className);
+                System.out.println(classStartTime + "-" + classEndTime + " " + className + " on "+ e.getWeek());
                 System.out.println("Starts " + sm.getStartM() + "-" + startDateDay + " ends " + em.getEndM() + "-" + endDateDay);
-                fc.setFullClass(classStartTime + "-" + classEndTime + " " + className);
+                fc.setFullClass(classStartTime + "-" + classEndTime + " " + className + " on "+ e.getWeek());
 
                 classNum+=1;
 
                 System.out.println("Press 0 to go back to menu");
                 e.setEnter(Integer.parseInt(sc1.next()));
-
         }
-
-
-
         if(classNum==1){
             fullClass1=fc.getFullClass();
         }
         if(classNum==2){
             fullClass2=fc.getFullClass();
         }
+        if(classNum==3){
+            fullClass3=fc.getFullClass();
+        }
+        if(classNum==4){
+            fullClass4=fc.getFullClass();
+        }
+        if(classNum==5){
+            fullClass5=fc.getFullClass();
+        }
     }
+
 }

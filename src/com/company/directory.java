@@ -1,6 +1,34 @@
 package com.company;
 
 import java.util.Scanner;
+import java.util.*;
+
+interface infA{
+    void printClasses();
+}
+interface infB extends infA{
+    void printAssignments();
+}
+class sample implements infB{
+    @Override
+    public void printClasses(){
+        addClass fc1 = new addClass();
+        System.out.println(fc1.getFullClass1());
+        System.out.println(fc1.getFullClass2());
+        System.out.println(fc1.getFullClass3());
+        System.out.println(fc1.getFullClass4());
+        System.out.println(fc1.getFullClass5());
+    }
+    @Override
+    public void printAssignments(){
+        assignment as = new assignment();
+        System.out.println(as.getFullAssignment1());
+        System.out.println(as.getFullAssignment2());
+        System.out.println(as.getFullAssignment3());
+        System.out.println(as.getFullAssignment4());
+        System.out.println(as.getFullAssignment5());
+    }
+}
 
 public class directory {
 
@@ -28,6 +56,7 @@ public class directory {
 
     static addClass fc1 = new addClass();
 
+    static assignment as = new assignment();
 
     public int getSeeMonth() {
         return seeMonth;
@@ -38,9 +67,16 @@ public class directory {
     }
 
 
+    static sample ob1 = new sample();
+
+    static Calendar c = Calendar.getInstance();
+
+
     public static void main() {
 
         if (e.getEnter() == 3) {
+
+            System.out.println("The current date is "+c.get(Calendar.MONTH)+" - "+c.get(Calendar.DATE)+" - "+c.get(Calendar.YEAR));
 
             System.out.println("Type the number of the month you want to view (1-12): ");
             seeMonth = Integer.parseInt(sc1.next());
@@ -50,30 +86,27 @@ public class directory {
             weekdayFinder.main();
 
 
-
             System.out.println("----------------------------");
             System.out.println("Month of " + sem.getSeeM() + " Day " + seeDay);
             System.out.println(" ");
-            System.out.println("Schedule of activities:");
+
 
             if (startDateMonth <= seeMonth && startDateDay <= seeDay) {
-                System.out.println(fc1.getFullClass1());
-                System.out.println(fc1.getFullClass2());
-                //System.out.println(" "+w.getWeek());
+                System.out.println("Schedule of activities:");
+                ob1.printClasses();
+                System.out.println(" ");
+                System.out.println("dueDates");
+                ob1.printAssignments();
             }
 
-
-
-                System.out.println(" ");
-                //System.out.println(dueDates);
-                System.out.println(" ");
-                //System.out.println( to-do );
-                System.out.println(" ");
                 System.out.println("----------------------------");
                 System.out.println("Press 0 to go back to menu");
                 e.setEnter(Integer.parseInt(sc1.next()));
             }
         }
     }
+
+
+
 
 

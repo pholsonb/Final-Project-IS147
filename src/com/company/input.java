@@ -6,6 +6,7 @@ public class input {
     static int enter = 0 ;
 
     static String fullClass;
+    static String fullAssignment;
     static String startM;
     static String endM;
     static String seeM;
@@ -29,6 +30,11 @@ public class input {
     public void setFullClass(String fullClass){
         this.fullClass=fullClass;
     }
+
+    public String getFullAssignment(){
+        return fullAssignment;
+    }
+    public void setFullAssignment(String fullAssignment){this.fullAssignment=fullAssignment;}
 
     //Start month of new added class Getter and Setter
     public String getStartM(){
