@@ -3,6 +3,7 @@ package com.company;
 import java.util.Scanner;
 import java.util.*;
 
+//interfaces that print out the list of classes and assignments
 interface infA{
     void printClasses();
 }
@@ -62,7 +63,7 @@ public class directory {
     static Calendar c = Calendar.getInstance();
 
     public static void main() {
-
+    //asks the user to select a day, and all the classes and assignments are show that the user has entered
         if (e.getEnter() == 3) {
 
             System.out.println("The current date is "+c.get(Calendar.MONTH)+" - "+c.get(Calendar.DATE)+" - "+c.get(Calendar.YEAR));
@@ -80,13 +81,13 @@ public class directory {
             System.out.println(" ");
 
 
-            if (startDateMonth <= seeMonth && startDateDay <= seeDay) {
+
                 System.out.println("Schedule of activities:");
                 ob1.printClasses();
                 System.out.println(" ");
                 System.out.println("dueDates");
                 ob1.printAssignments();
-            }
+
 
                 System.out.println("----------------------------");
                 System.out.println("Press 0 to go back to menu");

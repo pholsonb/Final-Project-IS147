@@ -2,6 +2,7 @@ package com.company;
 
 public class input {
 
+    //sets variable that controls screen selection to the menu screen
     static int enter = 0 ;
 
     static String fullClass;
@@ -11,17 +12,20 @@ public class input {
     static String seeM;
     static String week;
 
+
+    //get and set variable that controls what screen user is on (directory, add class screen, add assignment)
     public int getEnter(){return enter;}
     public void setEnter(int newEnter){
         input.enter = newEnter;
     }
 
+    //get and set string version of the week selection
     public String getWeek(){return week;}
     public void setWeek(String week){
         this.week=week;
     }
 
-    //full class description that gets entered into directory with time and name
+    //full class description that gets entered into directory with time and name and week
     public String getFullClass(){
         return fullClass;
     }
@@ -60,6 +64,7 @@ public class input {
 
 
     public static void classes() {
+        //keeps the user always in a screen(class)
         for(int i = 0; i < 100; i++) {
             menu.main();
             addClass.main();
@@ -69,7 +74,3 @@ public class input {
         }
         }
         }
-
-
-
-

@@ -73,6 +73,7 @@ public class addClass {
     static input e = new input();
 
     public static void main() {
+        //asks the user about their class and adds it to the directory
         if (e.getEnter() == 1) {
 
                 Scanner sc = new Scanner(System.in);
@@ -116,6 +117,7 @@ public class addClass {
                 System.out.println("Press 0 to go back to menu");
                 e.setEnter(Integer.parseInt(sc1.next()));
         }
+        //saves the full class to 5 different variables depending on how many classes have been added already
         if(classNum==1){
             fullClass1=e.getFullClass();
         }
@@ -132,5 +134,4 @@ public class addClass {
             fullClass5=e.getFullClass();
         }
     }
-
 }

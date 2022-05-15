@@ -14,6 +14,7 @@ public class calender {
 
     public static void main(){
 
+    //converts month int into string version
         for(int i = 1; i < 13; i++){
             if(edm.getStartDateMonth() == i){
                 sm.setStartM(month[i-1]);
@@ -29,9 +30,6 @@ public class calender {
                 sm.setSeeM(month[i-1]);
             }
         }
-
-
-
     }
 }
 

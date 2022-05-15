@@ -37,6 +37,7 @@ public class assignment {
     static input e = new input();
 
     public static void main() {
+        //asks the user questions about upcoming assignment to be added to the directory
         if (e.getEnter() == 2) {
 
             System.out.println("What is the name of the assignment: ");
@@ -62,6 +63,7 @@ public class assignment {
 
             e.setEnter(Integer.parseInt(sc1.next()));
         }
+        //saves the full assignment to 5 different variables depending on how many assignments have already been entered
         if(assignmentNumber==1){
             fullAssignment1=e.getFullAssignment();
         }

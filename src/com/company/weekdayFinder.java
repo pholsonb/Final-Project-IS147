@@ -11,6 +11,7 @@ static input w =new input();
 static String[] day = {"Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"};
 
 public static void main(){
+    //turns weekday int value into string week
     switch(weekday.getWeekday()){
         case "1":
             w.setWeek(day[0]);
@@ -33,9 +34,6 @@ public static void main(){
         case "7":
             w.setWeek(day[6]);
             break;
-
     }
-
 }
-
 }

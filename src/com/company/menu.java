@@ -9,6 +9,7 @@ public class menu {
     static input e = new input();
 
     public static void main(){
+        //prints out main menu screen to prompt user to add class, assignment, or go to directory
         if(e.getEnter() == 0) {
             System.out.println("----------------------------------------");
             System.out.println("welcome to the Schedule Builder");
@@ -22,4 +23,3 @@ public class menu {
         }
     }
 }
-
